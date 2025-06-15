@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Tools</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Tools</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="section">
-            <h2>QR Code Generator</h2>
-            <input type="text" id="qrInput" placeholder="Enter text to encode">
-            <button id="generateBtn">Generate QR Code</button>
-            <div id="qrResult"></div>
-            <div id="qrError" class="error-message"></div>
-        </div>
-
-        <div class="section">
-            <h2>QR Code Scanner</h2>
-            <div id="scanner-container">
-                <video id="scanner" playsinline></video>
-                <canvas id="scanner-canvas"></canvas>
-                <div class="camera-overlay"></div>
-            </div>
-            <button id="startScanner">Start Scanner</button>
-            <button id="stopScanner" disabled>Stop Scanner</button>
-            <div id="scanResult"></div>
-        </div>
+  <div class="container">
+    <!-- QR Code Generator -->
+    <div class="section">
+      <h2>QR Code Generator</h2>
+      <input type="text" id="qrInput" placeholder="Enter text to encode" />
+      <button id="generateBtn">Generate QR Code</button>
+      <div id="qrResult"></div>
+      <div id="qrError" class="error-message"></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
-    <script src="script.js" defer></script>
+    <!-- QR Code Scanner -->
+    <div class="section">
+      <h2>QR Code Scanner</h2>
+      <div id="scanner-container">
+        <video id="scanner" playsinline></video>
+        <canvas id="scanner-canvas"></canvas>
+        <div class="camera-overlay"></div>
+      </div>
+      <button id="startScanner">Start Scanner</button>
+      <button id="stopScanner" disabled>Stop Scanner</button>
+      <div id="scanResult">Scan result will appear here.</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

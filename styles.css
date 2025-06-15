@@ -1,133 +1,115 @@
-/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 16px;
-    background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 16px;
+  background-color: #f4f4f4;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Section Blocks */
 .section {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Input Field */
-#qrInput {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    margin-bottom: 12px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
 }
 
-/* Buttons */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
 button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin: 6px 0;
-    transition: background 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
 }
 
 button:hover:not(:disabled) {
-    background: #0056b3;
+  background-color: #0056b3;
 }
 
 button:disabled {
-    background: #cccccc;
+  background-color: #aaa;
 }
 
-/* QR Result */
 #qrResult {
-    margin-top: 15px;
-    text-align: center;
+  margin-top: 15px;
+  text-align: center;
 }
 
-/* Scanner Container */
+.error-message {
+  display: none;
+  color: #d32f2f;
+  background-color: #ffebee;
+  padding: 10px;
+  border-radius: 4px;
+}
+
 #scanner-container {
-    width: 100%;
-    position: relative;
-    background: #f0f0f0;
-    border-radius: 4px;
-    overflow: hidden;
+  width: 100%;
+  position: relative;
+  background: #000;
+  overflow: hidden;
 }
 
 #scanner {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
-    background: #000;
-}
-
-#scanner-canvas {
-    display: none; /* Hidden unless needed */
+  width: 100%;
+  display: block;
 }
 
 .camera-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid rgba(0, 255, 0, 0.4);
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(0, 255, 0, 0.3);
+  pointer-events: none;
 }
 
-/* Scan Result */
 #scanResult {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    min-height: 24px;
-    font-size: 15px;
-    background-color: #fff;
+  margin-top: 10px;
+  background: #f0f0f0;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 4px;
+  min-height: 20px;
 }
 
-/* Error Message */
-.error-message {
-    color: #d32f2f;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #ffebee;
-    border-radius: 4px;
-    display: none;
-}
+/* Responsive */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 18px;
+  }
 
-/* Responsive Adjustments */
-@media (max-width: 480px) {
-    h2 {
-        font-size: 20px;
-    }
+  input[type="text"],
+  button {
+    font-size: 14px;
+  }
 
-    button {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    #qrInput {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    #scanResult {
-        font-size: 14px;
-    }
+  #scanResult {
+    font-size: 14px;
+  }
 }
